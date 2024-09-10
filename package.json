@@ -1,0 +1,37 @@
+{
+  "name": "ejs_test",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "ejs": "ejs-cli --base-dir ejs/ '**/*.ejs' -e 'parts/' --out dest/",
+    "sass": "sass --watch sass:dest/css",
+    "copy-images": "cp -R public/images/* dest/images/",
+    "watch:images": "nodemon --watch public/images --ext jpg,png,gif --exec \"npm run copy-images\"",
+    "watch:ejs": "nodemon --watch ejs --ext ejs,json --exec \"npm run ejs\"",
+    "watch:sass": "nodemon --watch sass --ext scss --exec \"npm run sass\"",
+    "format": "prettier --write \"**/*.{js,html,ejs,css,scss}\"",
+    "lint:css": "stylelint \"**/*.{css,scss}\" --fix",
+    "serve": "browser-sync start --config bs-config.js",
+    "dev": "npm-run-all --parallel watch:ejs watch:sass watch:images serve"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "browser-sync": "^3.0.2",
+    "ejs-cli": "^2.2.3",
+    "eslint": "^9.10.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-html": "^8.1.1",
+    "eslint-plugin-prettier": "^5.2.1",
+    "nodemon": "^3.1.4",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^3.3.3",
+    "sass": "^1.78.0",
+    "stylelint": "^16.9.0",
+    "stylelint-config-standard": "^36.0.1",
+    "stylelint-scss": "^6.5.1"
+  }
+}
