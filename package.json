@@ -5,15 +5,17 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "ejs": "ejs-cli --base-dir ejs/ '**/*.ejs' -e 'parts/' --out dest/",
-    "sass": "sass --watch sass:dest/css",
-    "copy-images": "cp -R public/images/* dest/images/",
-    "watch:images": "nodemon --watch public/images --ext jpg,png,gif --exec \"npm run copy-images\"",
+    "sass": "sass --watch assets/sass:dest/css",
+    "copy-images": "cp -R assets/images/* dest/images/",
+    "copy-js": "cp -R assets/js/* dest/js/",
+    "watch:images": "nodemon --watch assets/images --ext jpg,png,gif --exec \"npm run copy-images\"",
+    "watch:js": "nodemon --watch assets/js --ext js --exec \"npm run copy-js\"",
     "watch:ejs": "nodemon --watch ejs --ext ejs,json --exec \"npm run ejs\"",
-    "watch:sass": "nodemon --watch sass --ext scss --exec \"npm run sass\"",
+    "watch:sass": "nodemon --watch assets/sass --ext scss --exec \"npm run sass\"",
     "format": "prettier --write \"**/*.{js,html,ejs,css,scss}\"",
     "lint:css": "stylelint \"**/*.{css,scss}\" --fix",
     "serve": "browser-sync start --config bs-config.js",
-    "dev": "npm-run-all --parallel watch:ejs watch:sass watch:images serve"
+    "dev": "npm-run-all --parallel watch:ejs watch:sass watch:images watch:js serve"
   },
   "keywords": [],
   "author": "",

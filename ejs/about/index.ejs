@@ -1,16 +1,33 @@
 <!doctype html>
 <html lang="ja">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Aboutぺーじ</title>
+    <%- include('../parts/_head') %>
+    <title>About</title>
     <meta name="description" content="" />
+    <link rel="stylesheet" href="/css/common.css" />
+    <link rel="stylesheet" href="/css/about.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/js/common.js"></script>
   </head>
+
   <body>
     <!-- header -->
     <%- include('../parts/_header') %>
 
-    <main>Aboutぺーじdayo</main>
+    <main>
+      <section class="p-top">
+        <div class="u-container">
+          <h1 class="c-title">About</h1>
+          <p class="c-text">
+            text text text text text text text texttext text text text text text
+            text texttext text text text text text text text aaa
+          </p>
+          <div>
+            <img src="/images/neko03.jpg" alt="neko03" />
+          </div>
+        </div>
+      </section>
+    </main>
 
     <!-- footer -->
     <%- include('../parts/_footer') %>

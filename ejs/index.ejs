@@ -1,11 +1,13 @@
 <!doctype html>
 <html lang="ja">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <%- include('parts/_head') %>
     <title>TOP</title>
     <meta name="description" content="" />
-    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/common.css" />
+    <link rel="stylesheet" href="/css/top.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/js/common.js"></script>
   </head>
   <body>
     <!-- header -->
@@ -13,30 +15,29 @@
 
     <main class="l-main">
       <section class="p-top">
-        <h2 class="c-title">Top page</h2>
-        <div class="test">
-          ・画像のパス<br />
-          ・jQuery使える？<br />
-          ・SASS使える？<br />
-          ・オートリロードできる？<br />
-          ・Linter<br />
-        </div>
-        <div>
-          <img src="/images/neko.jpg" alt="neko" />
-        </div>
-        <p class="c-text">
-          text text text text text text text texttext text text text text text
-          text texttext text text text text text text text aaa
-        </p>
-        <div>
-          <img src="/images/neko02.jpg" alt="neko02" />
-        </div>
-        <p class="c-text">
-          text text text text text text text texttext text text text text text
-          text texttext text text text text text text text aaa
-        </p>
-        <div>
-          <img src="/images/neko03.jpg" alt="neko03" />
+        <div class="u-container">
+          <h1 class="c-title">Top page</h1>
+          <p class="c-text">
+            text text text text text text text texttext text text text text text
+            text texttext text text text text text text text aaa
+          </p>
+          <div>
+            <img src="/images/neko.jpg" alt="neko" />
+          </div>
+          <p class="c-text">
+            text text text text text text text texttext text text text text text
+            text texttext text text text text text text text aaa
+          </p>
+          <div>
+            <img src="/images/neko02.jpg" alt="neko02" />
+          </div>
+          <p class="c-text">
+            text text text text text text text texttext text text text text text
+            text texttext text text text text text text text aaa
+          </p>
+          <div>
+            <img src="/images/neko03.jpg" alt="neko03" />
+          </div>
         </div>
       </section>
     </main>
